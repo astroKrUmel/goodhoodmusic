@@ -1,0 +1,59 @@
+#mediaBox {
+
+    .button-booking {
+        float: left;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .music-and-links {
+        float: left;
+        width: 100%;
+        margin: 2em 0;
+
+        .links {
+            width: 100%;
+            display: inline-block;
+            margin-top: 1em;
+
+            .icon {
+                margin: 0 10px;
+            }
+        }
+
+        .direct-link {
+            display: table;
+            word-wrap: break-word;
+        }
+    }
+
+    
+    @media (min-width: $bp-sm) {
+        .music-and-links {
+            .embed-player {
+                float: left;
+            }
+
+            .embed-player,
+            .links {
+                width: 50%;
+            }
+
+            .links {
+                float: right;
+                margin-top: 0;
+
+                .link {
+                    float: right;
+                }
+            }
+
+            .direct-link {
+                font-size: 1em;
+                text-align: right;
+                width: 100%;
+                margin-top: .5em;
+            }
+        }
+    }
+}

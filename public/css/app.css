@@ -1,0 +1,556 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #222222;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body #layout {
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  body #layout {
+    margin-left: calc((100% - 768px) / 2);
+    width: 768px;
+  }
+}
+
+@media (min-width: 992px) {
+  body #layout {
+    margin-left: calc((100% - 992px) / 2);
+    width: 992px;
+  }
+}
+
+body ul, body li {
+  list-style-type: none;
+}
+
+body .layer-active {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+#logo {
+  margin: 1em 0;
+  width: 100%;
+}
+
+#logo .main-image, #logo img {
+  margin: 0 auto;
+}
+
+.navigation {
+  position: relative;
+  float: left;
+  width: 100%;
+  background: #fff;
+  color: #000;
+}
+
+.navigation > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation > ul > li {
+  float: right;
+  margin: .5em 1em 0 1em;
+  cursor: pointer;
+}
+
+.navigation > ul > li.logo {
+  float: left;
+  margin: 0 1em;
+  background: url("/images/logos/Logo-Black-TwoRows.svg") no-repeat;
+  background-size: 100% auto;
+  height: 39px;
+  width: 39px;
+}
+
+.navigation > ul > li.logo a {
+  display: block;
+  height: 39px;
+}
+
+.navigation > ul > li.menu-mobile-button {
+  float: right;
+  margin: 0 1em;
+  background: url("/images/menu-mobile-button.png") no-repeat;
+  background-size: 100% auto;
+  height: 40px;
+  width: 40px;
+}
+
+.navigation > ul > li.menu ul.show-mobile-list {
+  height: 220px;
+}
+
+.navigation > ul > li ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background: #fff;
+  z-index: 10;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 200ms ease-in;
+}
+
+.navigation > ul > li ul li {
+  float: left;
+  width: 100%;
+}
+
+.navigation > ul > li ul li a {
+  width: 100%;
+  display: inline-block;
+  padding: 1em 1.5em;
+  color: #000;
+  text-decoration: none;
+}
+
+.navigation > ul > li ul li a.active-tab {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .navigation > ul > li {
+    float: right;
+    margin: .5em 1em 0 1em;
+    cursor: pointer;
+  }
+  .navigation > ul > li.logo {
+    background-position: 0 5px;
+  }
+  .navigation > ul > li.menu-mobile-button {
+    display: none;
+  }
+  .navigation > ul > li.menu {
+    margin: 0 1em 0 0;
+  }
+  .navigation > ul > li.menu ul {
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+  .navigation > ul > li.menu ul.show-mobile-list {
+    height: auto;
+  }
+  .navigation > ul > li.menu ul li {
+    width: auto;
+  }
+  .navigation > ul > li.menu ul li a {
+    width: auto;
+  }
+}
+
+section#footer {
+  margin: 0;
+  width: 100%;
+  background: #fff;
+}
+
+section#footer .navigation ul li {
+  padding: 1em 1.5em;
+  margin: 0;
+}
+
+section#footer .navigation ul li:hover {
+  background: #000;
+}
+
+section#footer .navigation ul li:hover a {
+  color: #fff;
+}
+
+section#footer .navigation a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.icon.icon-facebook-white {
+  background: url("/images/icons/facebook_white.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.icon.icon-facebook-white.icon-small {
+  width: 25px;
+  height: 25px;
+}
+
+.icon.icon-facebook-grey {
+  background: url("/images/icons/facebook_grey.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.icon.icon-facebook-grey.icon-small {
+  width: 25px;
+  height: 25px;
+}
+
+.icon.icon-mixcloud {
+  background: url("/images/icons/mixcloud.png") no-repeat;
+  background-position: 0 3px;
+  width: 80px;
+  height: 50px;
+}
+
+.icon.icon-instagram {
+  background: url("/images/icons/instagram.png") no-repeat;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+}
+
+section {
+  margin: 0 1.5em;
+  float: left;
+  width: calc(100% - 3em);
+}
+
+h2 {
+  float: left;
+  width: 100%;
+  color: #fff;
+  margin: .5em 0;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    margin: 1em 0;
+  }
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+.seperator {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 1em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  float: left;
+  width: 100%;
+  color: #fff;
+}
+
+a.link {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+a.button {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6em;
+  padding: .5em 0;
+}
+
+a.button:hover {
+  opacity: .7;
+}
+
+#startpageOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  background: #222222;
+  cursor: pointer;
+  transition: height .5s ease-in-out;
+}
+
+#startpageOverlay .main-image, #startpageOverlay img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#startpageOverlay .button-arrow-down {
+  background: url("/images/icons/arrow-down.png") no-repeat;
+  background-size: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 1.4em;
+  height: 1.5em;
+}
+
+.picture-collection {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 calc(2 * 0.5em) 0;
+}
+
+.picture-collection:hover {
+  opacity: .7;
+}
+
+.picture-collection strong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  opacity: .7;
+  text-shadow: 0 0 20px #000;
+}
+
+@media (min-width: 480px) {
+  .picture-collection {
+    width: calc(50% - 0.5em);
+  }
+  .picture-collection:nth-of-type(2n+1) {
+    margin: 0.5em 0.5em 0.5em 0;
+  }
+  .picture-collection:nth-of-type(2n) {
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+  .picture-collection strong {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 768px) {
+  .picture-collection {
+    width: calc(32.5%  - (2 * 0.5em) / 3);
+  }
+  .picture-collection:nth-child(even), .picture-collection:nth-child(odd) {
+    margin: 0;
+  }
+  .picture-collection:nth-of-type(3n+1) {
+    margin: 0.5em 0.5em 0.5em 0;
+  }
+  .picture-collection:nth-of-type(3n+2) {
+    margin: 0.5em;
+  }
+  .picture-collection:nth-of-type(3n+3) {
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+  .picture-collection strong {
+    display: none;
+  }
+  .picture-collection:hover strong {
+    display: block;
+  }
+}
+
+#events .fb-page-wrapper {
+  margin: 0 auto;
+  display: block;
+}
+
+#events .fb-page-wrapper.mobile {
+  width: 270px;
+}
+
+#events .fb-page-wrapper.tablet {
+  display: none;
+  width: 430px;
+}
+
+@media (min-width: 480px) {
+  #events .fb-page-wrapper.mobile {
+    display: none;
+  }
+  #events .fb-page-wrapper.tablet {
+    display: block;
+  }
+}
+
+#artists h2.sub-headline {
+  margin-bottom: .5em;
+}
+
+#contact {
+  margin-bottom: 2em;
+}
+
+#contact .button-booking {
+  float: left;
+  margin-bottom: .5em;
+}
+
+#contact .contact-text {
+  display: block;
+  text-align: center;
+}
+
+#main-pic .artist-image {
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  #main-pic .artist-image {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  #main-pic .artist-image {
+    height: 400px;
+  }
+}
+
+#biography .bio-text {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+#mediaBox .button-booking {
+  float: left;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#mediaBox .music-and-links {
+  float: left;
+  width: 100%;
+  margin: 2em 0;
+}
+
+#mediaBox .music-and-links .links {
+  width: 100%;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+#mediaBox .music-and-links .links .icon {
+  margin: 0 10px;
+}
+
+#mediaBox .music-and-links .direct-link {
+  display: table;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  #mediaBox .music-and-links .embed-player {
+    float: left;
+  }
+  #mediaBox .music-and-links .embed-player,
+  #mediaBox .music-and-links .links {
+    width: 50%;
+  }
+  #mediaBox .music-and-links .links {
+    float: right;
+    margin-top: 0;
+  }
+  #mediaBox .music-and-links .links .link {
+    float: right;
+  }
+  #mediaBox .music-and-links .direct-link {
+    font-size: 1em;
+    text-align: right;
+    width: 100%;
+    margin-top: .5em;
+  }
+}
+
+.artist-download .button {
+  float: left;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.landingpage .headline {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.landingpage a {
+  color: #fff;
+}
+
+#partner .partner-content {
+  float: left;
+  width: calc(100% - 20px);
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 480px) {
+  #partner .partner-content .partner-element {
+    position: relative;
+    height: 350px;
+  }
+  #partner .partner-content .partner-element img {
+    margin: auto;
+    max-height: 80%;
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+#videos .responsive-content {
+  /*overflow: hidden;*/
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  margin-bottom: 1em;
+}
+
+#videos .videos-content {
+  float: left;
+  width: 100%;
+}
+
+#videos iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/*# sourceMappingURL=app.css.map */

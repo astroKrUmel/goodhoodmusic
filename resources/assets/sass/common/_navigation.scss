@@ -1,0 +1,119 @@
+.navigation {
+    position: relative;
+    float: left;
+    width: 100%;
+    background: $white;
+    color: $black;
+
+    > ul {
+        margin: 0;
+        padding: 0;
+
+        > li {
+            float: right;
+            margin: .5em 1em 0 1em;
+            cursor: pointer;
+
+            &.logo {
+                float: left;
+                margin: 0 1em;
+                background: url($image-directory + 'logos/Logo-Black-TwoRows.svg') no-repeat;
+                background-size: 100% auto;
+                height: 39px;
+                width: 39px;
+
+                a {
+                    display: block;
+                    height: 39px;
+                }
+            }
+
+            &.menu-mobile-button {
+                float: right;
+                margin: 0 1em;
+                background: url($image-directory + 'menu-mobile-button.png') no-repeat;
+                background-size: 100% auto;
+                height: 40px;
+                width: 40px;
+            }
+
+            /// für die mobile Navi-Liste mobile
+            &.menu ul.show-mobile-list {
+                height: 220px;
+            }
+
+            ul {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 200px;
+                background: $white;
+                z-index: 10;
+                padding: 0;
+
+                /// für die Animation der mobile Navi-Liste
+                height: 0;
+                overflow: hidden;
+                transition: height 200ms ease-in;
+
+                li {
+                    float: left;
+                    width: 100%;
+                    
+                    a {
+                        width: 100%;
+                        display: inline-block;
+                        padding: 1em 1.5em;
+                        color: $black;
+                        text-decoration: none;
+
+                        &.active-tab {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media (min-width: $bp-sm) {
+        > ul {
+            > li {
+                float: right;
+                margin: .5em 1em 0 1em;
+                cursor: pointer;
+
+                &.logo {
+                    background-position: 0 5px;
+                }
+
+                &.menu-mobile-button {
+                    display: none;
+                }
+
+                &.menu {
+                    margin: 0 1em 0 0;
+
+                    ul {
+                        height: auto;
+                        position: relative;
+                        width: 100%;
+
+                        &.show-mobile-list {
+                            height: auto;
+                        }
+
+                        li {
+                            width: auto;
+
+                            a {
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

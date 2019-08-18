@@ -1,0 +1,21 @@
+
+/// all variables
+@import "variables";
+
+/// complete layout
+@import "layouts/layout";
+
+/// helper
+@import "helper/helper";
+
+/// common/default styling
+@import "common/common";
+
+/// home page ( / or /home )
+@import "home/home";
+
+/// artists page ( /artist/{name} )
+@import "artists/artist";
+
+/// all landingpages ( /impressum, /datenschutz, /partner)
+@import "landingpages/landingpages";

@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $black-content;
+    color: $white;
+
+    /// font
+    font-family: 'Open Sans', sans-serif;
+
+    #layout {
+        float: left;
+        width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: $bp-sm) {
+            margin-left: calc((100% - #{$bp-sm}) / 2);
+            width: $bp-sm;
+        }
+
+        @media (min-width: $bp-md) {
+            margin-left: calc((100% - #{$bp-md}) / 2);
+            width: $bp-md;
+        }
+    }
+
+    // no dots for ul and li tags
+    ul, li {
+        list-style-type: none;
+    }
+
+    .layer-active {
+        overflow: hidden;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@import "../common/logo";
+@import "../common/navigation";
+@import "../common/footer";
+
+

@@ -1,0 +1,28 @@
+#events {
+    .fb-page-wrapper {
+        margin: 0 auto;
+        display: block;
+
+        &.mobile {
+            width: 270px;
+        }
+
+        &.tablet {
+            display: none;
+            width: 430px;
+        }
+    }
+
+
+    @media (min-width: $bp-xs) {
+        .fb-page-wrapper {
+            &.mobile {
+                display: none;
+            }
+
+            &.tablet {
+                display: block;
+            }
+        }
+    }
+}
