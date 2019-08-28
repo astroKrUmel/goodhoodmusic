@@ -156,6 +156,17 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
     initNavigationStyling();
     mobileMenu();
 
+    //var oldBudget = 0,
+    //    budget = 5000,
+    //    years = 10,
+    //    factor = 2;
+    //
+    //for (var i=0; i<years; i++) {
+    //    oldBudget = budget;
+    //    budget = budget * factor - ((budget * factor) - oldBudget) * 0.25;
+    //    console.log('Jahr: ' + (i+1) + ' || Betrag nach Steuer: ' + budget);
+    //}
+
 } (jQuery);
 /**
  * Created by Kevin on 14.08.2017.

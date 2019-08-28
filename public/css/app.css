@@ -302,7 +302,6 @@ a.button:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -330,7 +329,6 @@ a.button:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
@@ -532,25 +530,8 @@ a.button:hover {
   }
 }
 
-#videos .responsive-content {
-  /*overflow: hidden;*/
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-  margin-bottom: 1em;
-}
-
-#videos .videos-content {
-  float: left;
+.videos-content iframe {
   width: 100%;
-}
-
-#videos iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
 }
 
 /*# sourceMappingURL=app.css.map */
